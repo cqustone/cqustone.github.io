@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="cqustone">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <title>HTML5学习</title>
+  <script type="text/javascript" src='js/jquery.js'></script>
+  <script type="text/javascript" src='js/fullPage.js'></script>  
+  <script type="text/javascript" src='js/jquerymobile-swipeupdown.js'></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <script type="text/javascript" src='js/isphone.js'></script>
+  <script type="text/javascript" language="javascript">
+      $("document").ready(function(){
+          var playing = true;
+          var audio = $("#media")[0];
+          var scrwidth = document.body.scrollWidth;
+		  // 此处判断条件跟css中的Media Queries相关
+		  scrwidth >= 560 ? scrwid=320 : scrwid = scrwidth;
+		  if(isphone) scrwid = scrwidth
+          var len = $("#dowebok").children(".section").length;
+          // 加载中动画隐藏
+          $(window).load(function(){  
+              $(".load").hide();
+              $(".progress span").css("width",1 / len * scrwid);  
+              $(".progress em").text(1 + " / " + len);
+          }) 
+          // 音频播放
+          $("#audio").click(function(){
+              $("#audio").toggleClass("on");
+              if (playing == false) {
+                  audio.play();
+                  playing = true;
+              }else {
+                  audio.pause();
+                  playing = false;
+              }
+          });
+          // fullpage.js 屏幕(section)切换：触摸、鼠标滚动事件均可
+          // 通过jQuery移除/添加类，保证每次加载均有动画效果(方法二见CSS代码)
+          $("#dowebok").fullpage({
+            afterLoad: function(anchorLink, index){
+                $(".progress span").css("width",index / len * scrwid);
+                $(".progress em").text(index + " / " + len);
+                $(".page").children().addClass("flash")
+            },
+            onLeave: function(anchorLink, index){
+                $(".page").children().removeClass("flash");
+            }
+          });
+          // 控制按钮 鼠标拖动（为了兼容桌面端鼠标拖动事件）
+          $("a.pre_btn").click(function(){$.fn.fullpage.moveSectionUp();});
+          $("a.next_btn").click(function(){$.fn.fullpage.moveSectionDown();});
+          $(document).on('swipedown', '.con', function(){$.fn.fullpage.moveSectionUp();});
+          $(document).on('swipeup', '.con', function(){$.fn.fullpage.moveSectionDown();});          
+      })
+  </script>  
+</head>
+<body>
+  <!-- 分享时显示的内容 -->
+  <div id="shareImage" style="display: none;">
+    <img src="css/html5.jpg">
+  </div>
+  <!-- 浏览时显示的内容 -->
+  <div class="wrap">
+    <!-- 正文内容 -->
+    <div class="phone">
+      <div class="top"></div>
+      <div class="state"></div>
+      <div class="title">HTML5学习</div>
+      <!-- 中间内容 START-->
+      <div class="con">
+        <!-- 音乐播放 -->
+        <div id="audio" class="off on" style="display: block;">
+            <audio loop src="pic/qjzg.mp3" id="media" autoplay preload>您的浏览器不支持 audio 标签</audio>
+        </div>
+        <!-- 加载动画 -->
+        <div class="load">
+          <canvas id="loading">您的浏览器不支持 canvas 标签</canvas>
+          <script type="text/javascript" src="js/shine-loading.js" ></script>
+        </div>
+        <!-- 提示箭头 START -->
+        <div class="arrow">
+            <div class="push">
+                <div class="left"><div class="leftin"></div></div>
+                <div class="right"><div class="rightin"></div></div>
+            </div>
+        </div>
+        <!-- 进度条 -->
+        <div class="progress">
+          <span></span>
+          <em class="page-tip"></em>
+        </div>
+        <!-- 展示内容 -->
+        <div id="dowebok">
+            <section class="section slide">            
+                <div class="page" id="page1">
+                  <h3 class="animated">大标题</h3>
+                  <span class="animated pic">
+                    <img src="pic/bg5.jpg" width=120 height=auto>
+                  </span>
+                  <p>手机浏览器</p>
+                  <p>微信内置浏览器</p>
+                </div>           
+            </section>
+            <section class="section slide">             
+                <div class="page" id="page2">
+                  
+                </div>             
+            </section>
+            <section class="section slide">             
+                <div class="page" id="page3">
+                  <div class="animated">
+                  动画效果参照http://www.dowebok.com/demo/2014/97/
+                  jQuery参照 http://www.dowebok.com/demo/2014/78/
+                  </div>
+                </div>              
+            </section>
+            <section class="section slide">             
+                <div class="page" id="page4">
+
+                </div>              
+            </section>
+            <section class="section slide">            
+                <div class="page" id="page5">
+
+                </div>           
+            </section>
+        </div>
+        <!-- 展示内容 END -->        
+      </div>
+      <!-- 中间内容 END-->
+      <div class="bot"></div>
+    </div>
+    <!-- 控制按钮 -->
+    <div class="ctrl_panel">
+      <a id="pre_page"  class="pre_btn">上一页</a>
+      <a id="next_page"  class="next_btn">下一页</a>
+    </div>  
+	<!-- 推广代码 -->
+    <div class="code">
+      <span>扫一扫，关注学习笔记（NetXXBJ）</span>
+      <img src="css/NetXXBJ.jpg" width="200px" height="200px">
+    </div>  	
+  </div>
+</body>
+</html>
