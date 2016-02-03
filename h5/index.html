@@ -45,10 +45,10 @@
             afterLoad: function(anchorLink, index){
                 $(".progress span").css("width",index / len * scrwid);
                 $(".progress em").text(index + " / " + len);
-                // $(".page").children().addClass("flash")
+                $(".page").children().addClass("zoomIn")
             },
             onLeave: function(anchorLink, index){
-                $(".page").children().removeClass("flash");
+                $(".page").children().removeClass("zoomIn");
             }
           });
           // 控制按钮 鼠标拖动（为了兼容桌面端鼠标拖动事件）
