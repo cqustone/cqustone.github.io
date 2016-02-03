@@ -85,8 +85,8 @@ canvas{display:block;margin:0 auto;}
 
 
 /* 动画定义 必须加.active保证每次加载均有动画效果(方法一见jQuery代码) */
-/*.active .page h3{animation:zoomIn 1s ease 0s 1 both;}
-.active .page div{animation:zoomIn 1s ease 0s 1 both;}*/
+.active .page h3{animation:zoomIn 1s ease 0s 1 both;}
+.active .page div{animation:zoomIn 1s ease 0s 1 both;}
 
 /* Media Queries 此处宽度(width)跟html中的三元表达式相关 !important*/
 @media screen and (max-width:559px){
