@@ -1,0 +1,24 @@
+# 此为注释 – 匹配以下规则的文件将被 Git 忽略
+
+# gitignore只能忽略那些原来没有被track的文件
+# 如果某些文件已经被纳入了版本管理中再修改.gitignore是无效的
+# 解决方法就是先把本地缓存删除(改变成未被track状态)然后再提交
+# git rm -r --cached .
+# git add .
+# git commit -m 'update .gitignore'
+
+# Jekyll安装 http://jekyll.bootcss.com/docs/installation/(Linux)
+# Http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html
+# jekyll new myblog
+# cd myblog
+# jekyll serve
+# Now browse to http://localhost:4000
+
+!.gitignore
+_site
+build/    # 忽略 build/ 目录下的所有文件
+
+#*.a       # 忽略所有 .a 结尾的文件
+#!lib.a    # 但 lib.a 除外
+#doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+#/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO

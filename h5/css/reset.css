@@ -60,21 +60,33 @@ canvas{display:block;margin:0 auto;}
 /*show content*/
 .page{background:#4BBFC3;width:100%;height:100%;word-break:break-all;overflow:hidden;
 	display:-webkit-box;-webkit-box-orient:vertical;-webkit-transform-origin:center center;}
-#page1{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;}
-#page2{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
-#page3{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
-#page4{background:url(../pic/bg4.jpg) no-repeat center;background-size:cover;} 
-#page5{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;}
+#page1{background:url(../pic/bg7.jpg) no-repeat center;}
+#page2{background:url(../pic/bg8.jpg) no-repeat center;} 
+#page3{background:url(../pic/bg9.jpg) no-repeat center;} 
+#page4{background:url(../pic/bg10.jpg) no-repeat center;} 
+#page5{background:url(../pic/bg7.jpg) no-repeat center;}
+#page6{background:url(../pic/bg8.jpg) no-repeat center;}
+#page7{background:url(../pic/bg9.jpg) no-repeat center;}
 
 
-.page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;padding:6px 0 0;}
-.page .pic{text-align:center;padding-top:20px;}
-.page .pic img{width:120px;height:auto;border:3px solid rgb(195, 246, 73);border-radius:8px;}
-#page2 h3{color:white;}
+.page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;padding:20px 0 0;}
+.page .text{margin:10px;padding:10px;background:#edd;border-radius:20px;z-index:5;
+			filter:alpha(opacity=50);-moz-opacity:0.5;-khtml-opacity: 0.5;opacity: 0.5; }
+.page .text p{color:rgb(66, 160, 2);z-index:10;line-height:18px;}
+.page .pic{width:150px;height:150px;border-radius:150px;margin:35px auto 10px; border:2px solid yellow;
+			background:url(../pic/jqbz.png) no-repeat 100% 100%;}
+.page .picbj{background-position:-226px -40px;}
+.page .picsy{background-position:-522px -293px;}
+.page .picjn{background-position:-419px -40px;}
+.page .picnj{background-position:-321px -293px;}
+.page .picgz{background-position:-128px -293px;}
+.page .piccd{background-position:-34px -40px;}
+.page .piclz{background-position:-618px -40px;}
+
 
 /* 动画定义 必须加.active保证每次加载均有动画效果(方法一见jQuery代码) */
 .active .page h3{animation:zoomIn 1s ease 0s 1 both;}
-.active .page img{animation:zoomIn 1s ease 0s 1 both;}
+.active .page div{animation:zoomIn 1s ease 0s 1 both;}
 
 /* Media Queries 此处宽度(width)跟html中的三元表达式相关 !important*/
 @media screen and (max-width:559px){
