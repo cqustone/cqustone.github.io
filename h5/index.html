@@ -46,10 +46,10 @@
                 $(".progress span").css("width",index / len * scrwid);
                 $(".progress em").text(index + " / " + len);
                 // $(".page").children().addClass("flash")
-            },
-            onLeave: function(anchorLink, index){
-                $(".page").children().removeClass("flash");
-            }
+            }//,
+            // onLeave: function(anchorLink, index){
+            //     $(".page").children().removeClass("flash");
+            // }
           });
           // 控制按钮 鼠标拖动（为了兼容桌面端鼠标拖动事件）
           $("a.pre_btn").click(function(){$.fn.fullpage.moveSectionUp();});
