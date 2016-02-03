@@ -24,7 +24,9 @@
           var len = $("#dowebok").children(".section").length;
           // 加载中动画隐藏
           $(window).load(function(){  
-              $(".load").hide();
+              $("#load").hide();
+              $("#arrow").show();
+              $("#audio").show();
               $(".progress span").css("width",1 / len * scrwid);  
               $(".progress em").text(1 + " / " + len);
           }) 
@@ -78,12 +80,12 @@
             <audio loop src="pic/qjzg.mp3" id="media" autoplay preload>您的浏览器不支持 audio 标签</audio>
         </div>
         <!-- 加载动画 -->
-        <div class="load">
+        <div id="load" class="load">
           <canvas id="loading">您的浏览器不支持 canvas 标签</canvas>
           <script type="text/javascript" src="js/shine-loading.js" ></script>
         </div>
         <!-- 提示箭头 START -->
-        <div class="arrow">
+        <div id="arrow" class="arrow">
             <div class="push">
                 <div class="left"><div class="leftin"></div></div>
                 <div class="right"><div class="rightin"></div></div>
