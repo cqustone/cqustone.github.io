@@ -27,6 +27,7 @@
               $("#load").hide();
               $("#arrow").show();
               $("#audio").show();
+              $("#page0").children().show().addClass("zoomIn")
               $(".progress span").css("width",1 / len * scrwid);  
               $(".progress em").text(1 + " / " + len);
           }) 
@@ -45,9 +46,9 @@
           // 通过jQuery移除/添加类，保证每次加载均有动画效果(方法二见CSS代码)
           $("#dowebok").fullpage({
             afterLoad: function(anchorLink, index){
-                $(".progress span").css("width",index / len * scrwid);
-                $(".progress em").text(index + " / " + len);
                 $(".page").children().show().addClass("zoomIn")
+                $(".progress span").css("width",index / len * scrwid);
+                $(".progress em").text(index + " / " + len);                
             },
             onLeave: function(anchorLink, index){
                 $(".page").children().hide().removeClass("zoomIn");
@@ -223,9 +224,9 @@
             </section>
             <section class="section slide">            
                 <div class="page" id="page8">
-                  <h3 class="animated">向七大军区致敬</h3>
-                  <div class="animated pic pictg"></div>                  
-                  <div class="animated text">
+                  <h3>向七大军区致敬</h3>
+                  <div class="pic pictg"></div>                  
+                  <div class="text">
                     <p>扫一扫，关注学习笔记（NetXXBJ）<br /></p>
                     <p>制作：石头(@cqustone)</p>
                     <p>素材来源于互联网</p>
