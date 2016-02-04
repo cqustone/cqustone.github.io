@@ -69,20 +69,20 @@ canvas{display:block;margin:0 auto;}
 /*show content*/
 .con .page{background:#4BBFC3;width:100%;height:100%;word-break:break-all;overflow:hidden;
 	display:-webkit-box;-webkit-box-orient:vertical;-webkit-transform-origin:center center;}
-#page1{background:url(../pic/bg4.jpg) no-repeat center;}
-#page2{background:url(../pic/bg7.jpg) no-repeat center;}
-#page3{background:url(../pic/bg8.jpg) no-repeat center;} 
-#page4{background:url(../pic/bg9.jpg) no-repeat center;} 
-#page5{background:url(../pic/bg10.jpg) no-repeat center;} 
-#page6{background:url(../pic/bg7.jpg) no-repeat center;}
-#page7{background:url(../pic/bg8.jpg) no-repeat center;}
-#page8{background:url(../pic/bg9.jpg) no-repeat center;}
+#page1{background:url(../pic/bg4.jpg) no-repeat center;background-size:cover;}
+#page2{background:url(../pic/bg7.jpg) no-repeat center;background-size:cover;}
+#page3{background:url(../pic/bg8.jpg) no-repeat center;background-size:cover;} 
+#page4{background:url(../pic/bg9.jpg) no-repeat center;background-size:cover;} 
+#page5{background:url(../pic/bg10.jpg) no-repeat center;background-size:cover;} 
+#page6{background:url(../pic/bg7.jpg) no-repeat center;background-size:cover;}
+#page7{background:url(../pic/bg8.jpg) no-repeat center;background-size:cover;}
+#page8{background:url(../pic/bg9.jpg) no-repeat center;background-size:cover;}
 .page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;padding:20px 0 0;}
 .page h4{color:rgb(34, 88, 1);font-size:1.2em;text-align:center;margin:0;padding:0;line-height:24px;}
 .page .text{margin:10px;padding:10px;background:url(../pic/bgcolor.png) repeat;border-radius:20px;}
 .page .text p{color:rgb(34, 88, 1);line-height:18px;}
 .page .pic{width:150px;height:150px;border-radius:150px;margin:10px auto 10px; border:2px solid yellow;
-			background:url(../pic/jqbz.png) no-repeat 100% 100%;}
+			background:url(../pic/jqbz.png) no-repeat;}
 .page .picbj{background-position:-226px -40px;}
 .page .picsy{background-position:-522px -293px;}
 .page .picjn{background-position:-419px -40px;}
