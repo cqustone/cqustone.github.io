@@ -14,7 +14,7 @@
   <script type="text/javascript" src='js/isphone.js'></script>
   <script type="text/javascript" language="javascript">
       $("document").ready(function(){
-          var playing = true;
+          var playing = false;
           var audio = $("#media")[0];
           var scrwidth = document.body.scrollWidth;
     		  // 此处判断条件跟css中的Media Queries相关
@@ -25,6 +25,9 @@
           $(window).load(function(){  
               $("#load").hide();
               $("#arrow").show();
+              $("#audio").show();
+              audio.play();
+              playing = true;
               $("section,.fp-tableCell,.page").height($("#con").height());
               $("#page0").children().show().addClass("zoomIn")              
               $(".progress span").css("width",1 / len * scrwid);  
@@ -76,8 +79,8 @@
       <!-- 中间内容 START-->
       <div class="con" id="con">
         <!-- 音乐播放 -->
-        <div id="audio" class="off on" style="display: block;">
-            <audio loop src="pic/qjzg.mp3" id="media" preload autoplay>您的浏览器不支持 audio 标签</audio>
+        <div id="audio" class="off on">
+            <audio loop src="pic/qjzg.mp3" id="media" preload>您的浏览器不支持 audio 标签</audio>
         </div>
         <!-- 加载动画 -->
         <div id="load" class="load">
