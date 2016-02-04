@@ -2,7 +2,7 @@
 html,body,div,span,h3,h2,p,blockquote,pre,a,cite,code,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 strike,strong,em,sub,sup,dl,dt,dd,ol,ul,li,form,label,table,caption{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 tbody,tfoot,thead,tr,th,td,canvas,footer,header,menu,nav,section,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
-footer,header,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}
+footer,header,menu,nav,section{display:block;border:0;}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 /* 动画定义  animation */
 @-webkit-keyframes rotating{from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}
