@@ -1,3 +1,13 @@
+# 此文件中慎用TAB键空格 – 匹配以下规则的文件将被 Git 忽略
+!.gitignore
+_site    
+#*.a       # 忽略所有 .a 结尾的文件
+#!lib.a    # 但 lib.a 除外
+#doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+#/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+
+
+
 # gitignore只能忽略那些原来没有被track的文件
 # 如果某些文件已经被纳入了版本管理中再修改.gitignore是无效的
 # 解决方法就是先把本地缓存删除(改变成未被track状态)然后再提交
@@ -11,12 +21,3 @@
 # cd myblog
 # jekyll serve
 # Now browse to http://localhost:4000
-
-# 此为注释 – 匹配以下规则的文件将被 Git 忽略
-!.gitignore
-_site	# 忽略 _site/ 目录下的所有文件  
-
-#*.a       # 忽略所有 .a 结尾的文件
-#!lib.a    # 但 lib.a 除外
-#doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
-#/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
