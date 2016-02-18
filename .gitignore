@@ -4,8 +4,6 @@ _site
 #*.a       # 忽略所有 .a 结尾的文件
 #!lib.a    # 但 lib.a 除外
 #doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
-#/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
-
 
 
 # gitignore只能忽略那些原来没有被track的文件
@@ -15,9 +13,18 @@ _site
 # git add .
 # git commit -m 'update .gitignore'
 
+
 # Jekyll安装 http://jekyll.bootcss.com/docs/installation/(Linux)
 # Http://www.madhur.co.in/blog/2011/09/01/runningjekyllwindows.html
 # jekyll new myblog
 # cd myblog
 # jekyll serve
 # Now browse to http://localhost:4000
+
+
+#NOTE:展示分类更好的方式
+#http://stackoverflow.com/a/24745825
+#If you want to display only the posts in a certain tag/category (and not all posts), 
+#you can change the first for loop (the one inside the capture) to one of these:
+#{% for post in site.tags['whatever'] %}
+#{% for post in site.categories['whatever'] %}
