@@ -23,17 +23,13 @@ icon: glyphicon-heart
 ### 关于本站   
 
 这个博客主要用于记录一下前端路上的风景。  
-
 2016.02  Fork from [Gaohaoyang](https://github.com/Gaohaoyang)'s blog.  
-
 2016年   学习Git，研究前端开发技术  
 
 ---
 
 #### 友情链接
-
-[Home](https://github.com/cqustone) \| [Gaohaoyang](https://github.com/Gaohaoyang)
-
+[Home](https://github.com/cqustone) \| [Gaohaoyang](https://github.com/Gaohaoyang)  
 Comment below to exchange link with me.  
 
 ---
