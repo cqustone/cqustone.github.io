@@ -13,6 +13,13 @@ layout: default
         {{content}}
       </article>
       <hr>
+	  {% if page.previous %}
+      <a href="{{page.previous.url | prepend:site.baseurl | replace:'//','/'}}">上一篇：{{page.previous.title}}</a><br>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{page.next.url | prepend:site.baseurl | replace:'//','/'}}">下一篇：{{page.next.title}}</a>
+      {% endif %}
+	  <hr>
       <div class="bdsharebuttonbox">
         <a href="#" class="bds_more" data-cmd="more"></a>
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
