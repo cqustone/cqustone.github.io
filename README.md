@@ -2,13 +2,12 @@
 Here contains files for http://cqustone.github.io.  
 It is my personal website, welcome for your arrival.  
 
-#HTML5
-H5页面主要包括以下几种技术：  
+#HTML5  
 - 全屏切换：FullPage.js、Scrollify.js  
 - 响应式布局：CSS3 Media Queries  
 - CSS3动画效果：Animate.min.css  
 - HTML5新标签：Canvas、Audio  
-- 实例中遇到的其他问题(https://github.com/cqustone/WebStudy/tree/master/HTML5)。 
+- [实例中遇到的其他问题](https://github.com/cqustone/WebStudy/tree/master/HTML5)。 
 
 > **HTML5**
 
