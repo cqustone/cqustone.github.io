@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="author" content="cqustone">
 	<meta name="date" content="20160318">
-	<title>HTML5 TEMPLATE</title>
+	<title></title>
 	<link rel="stylesheet" href="css/index.css">
 	<script type="text/javascript" src='js/relocate.js'></script>
+	<script type="text/javascript">
+		if(relocate){window.location.href="phone.html";}
+		window.onload = function(){
+			var val = document.getElementById("phone").contentWindow.docement.getElementsByTagName("title")[0].innerText;
+		    document.getElementsByTagName("title")[0].innerText = val;
+		    document.getElementById("h").innerText = val;
+		}
+	</script>
 </head>
 <body>
 	<!-- 分享时显示的内容 -->
@@ -18,9 +26,9 @@
 		<div class="phone">
 			<div class="top"></div>
 			<div class="state"></div>
-			<div class="title border" id="h">HTML5 TEMPLATE</div>
+			<div class="title border" id="h"></div>
 			<div class="content border">
-				<iframe src="html5.html" id="h5" width="100%" height="100%" frameborder="0"></iframe>
+				<iframe src="phone.html" id="phone" width="100%" height="100%" frameborder="0"></iframe>
 			</div>
 			<div class="bot"></div>
 		</div>
@@ -28,14 +36,7 @@
 			<span>扫一扫，关注学习笔记（NetXXBJ）</span>
 			<img src="css/NetXXBJ.jpg" width="200px" height="200px">
 		</div>  	
-	</div>
-	<script type="text/javascript"> 
-		window.onload = function(){  
-			var val = document.getElementById("h5").contentWindow.docement.getElementsByTagName("title")[0].innerText;
-		    document.getElementsByTagName("title")[0].innerText = val;
-		    document.getElementById("h").innerText = val;
-		}
-	</script>
+	</div>	
   	<!-- 统计代码 -->
 	<script>
 		var _hmt = _hmt || [];

@@ -5,7 +5,7 @@ tbody,tfoot,thead,tr,th,td,canvas,footer,header,menu,nav,section,audio,video{mar
 footer,header,menu,nav,section{display:block;border:0;}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 body{width:100%;height:100%;margin:0 auto;font-family:'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;
-	 color:white;user-select:none;user-select:none;user-select:none;overflow:hidden;}
+	 color:white;-moz-user-select: none;-webkit-user-select:none;user-select:none;overflow:hidden;}
 .wrap{background-color:#bbb;cursor:pointer;width:100%;height:100%;overflow:hidden;position:relative;}
 #dowebok,section,.fp-tableCell,.page{width:100%;height:100%;margin:0 auto;}
 .page{background:#4BBFC3;word-break:break-all;overflow:hidden;display:box;box-orient:vertical;transform-origin:center center;}
@@ -39,6 +39,7 @@ body{width:100%;height:100%;margin:0 auto;font-family:'Microsoft Yahei',Tahoma,H
 #page9 .text{background:none;margin-top:0px;}
 #page9 .text p{text-align:center;}
 /* animation 必须加.active确保每次播放 */
+.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 @keyframes zoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3);}50%{opacity:1}}
 .active .page h3,.active .page h4{animation:zoomIn 1s ease 0s 1 both;}
 .active .page div{animation:zoomIn 1s ease 0s 1 both;}
