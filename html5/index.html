@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="author" content="cqustone">
 	<meta name="date" content="20160318">
-	<title></title>
+	<title>HTML5 Study</title>
 	<link rel="stylesheet" href="css/index.css">
 	<script type="text/javascript" src='js/relocate.js'></script>
 </head>
@@ -13,38 +13,27 @@
 		<div class="phone">
 			<div class="top"></div>
 			<div class="state"></div>
-			<div class="title border" id="h"></div>
+			<div class="title border">HTML5 Study</div>
 			<div class="content border">
 				<iframe src="phone.html" id="phone" width="100%" height="100%" frameborder="0"></iframe>
 			</div>
 			<div class="bot"></div>
 		</div>
 		<div class="code">
-			<span>扫一扫，关注学习笔记（NetXXBJ）</span>
-			<img src="css/NetXXBJ.jpg" width="200px" height="200px">
-			<!-- 分享代码 -->
+			<span>扫码关注学习笔记（NetXXBJ）</span>
+			<img src="css/NetXXBJ.jpg" width="180px" height="180px">
 			<div class="bdsharebuttonbox">
-		        <a href="#" class="bds_more" data-cmd="more"></a>
-		        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-		        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-		        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-		        <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-		        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-		        <a href="#" class="bds_print" data-cmd="print" title="打印文章"></a>
+				<a href="#" class="bds_more" data-cmd="more"></a>
+				<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+				<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+				<a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+				<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+				<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
 			</div>
-			<script>
-				window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 			</script>
 		</div>  	
 	</div>	
-	<!-- 获取FRAME标题 -->
-	<script type="text/javascript">
-		window.onload = function(){
-			var val = document.getElementById("phone").contentWindow.docement.getElementsByTagName("title")[0].innerText;
-		    document.getElementsByTagName("title")[0].innerText = val;
-		    document.getElementById("h").innerText = val;
-		}
-	</script>
   	<!-- 统计代码 -->
 	<script>
 		var _hmt = _hmt || [];

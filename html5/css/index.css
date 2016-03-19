@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*RESET*/
 html,body,div,span,h3,h2,p,blockquote,pre,a,cite,code,img{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 strike,strong,em,sub,sup,dl,dt,dd,ol,ul,li,form,label,table,caption{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
@@ -15,8 +16,9 @@ body{background:url(bg.jpg) no-repeat fixed center;background-size:cover;
 .state{background:url(NetXXBJ.gif) no-repeat center;height:20px;background-size:100% 100%;}
 .title{height:40px;line-height:40px;font-size:20px;text-align:center;background:#000;color:#fff;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .content{height:490px;overflow:hidden;}
-.code{height:226px;float:right;padding-top:108px;}
-.code span{font-size:12px;display:block;line-height:24px;}
+/* code & share */
+.code{height:240px;width:200px;overflow:hidden;float:right;padding-top:108px;}
+.code span{width:186px;font-size:12px;display:block;line-height:24px;text-align:center;}
 @media screen  and (min-height:800px) and (max-height:900px){.code{padding-top:210px;}}
 @media screen  and (min-height:901px) and (max-height:1000px){.code{padding-top:260px;}}
 @media screen  and (min-height:1001px) and (max-height:1100px){.code{padding-top:310px;}}
@@ -24,7 +26,7 @@ body{background:url(bg.jpg) no-repeat fixed center;background-size:cover;
 @media screen  and (min-height:1201px) and (max-height:1500px){.code{padding-top:460px;}}
 @media screen  and (min-height:1501px) and (max-height:1700px){.code{padding-top:590px;}}
 @media screen  and (min-height:1701px) {.code{padding-top:700px;}}
-@media screen  and (min-width:1200px) and (max-width:1400px){.wrap{max-width:800px;;}}
-@media screen  and (min-width:1401px) and (max-width:1800px){.wrap{max-width:1000px;;}}
-@media screen  and (min-width:1801px) and (max-width:2400px){.wrap{max-width:1200px;;}}
-@media screen  and (min-width:2401px) {.wrap{max-width:1600px;;}}
+@media screen  and (min-width:1200px) and (max-width:1400px){.wrap{max-width:800px;}}
+@media screen  and (min-width:1401px) and (max-width:1800px){.wrap{max-width:1000px;}}
+@media screen  and (min-width:1801px) and (max-width:2400px){.wrap{max-width:1200px;}}
+@media screen  and (min-width:2401px) {.wrap{max-width:1600px;}}
