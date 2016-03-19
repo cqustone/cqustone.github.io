@@ -7,21 +7,8 @@
 	<title></title>
 	<link rel="stylesheet" href="css/index.css">
 	<script type="text/javascript" src='js/relocate.js'></script>
-	<script type="text/javascript">
-		if(relocate){window.location.href="phone.html";}
-		window.onload = function(){
-			var val = document.getElementById("phone").contentWindow.docement.getElementsByTagName("title")[0].innerText;
-		    document.getElementsByTagName("title")[0].innerText = val;
-		    document.getElementById("h").innerText = val;
-		}
-	</script>
 </head>
 <body>
-	<!-- 分享时显示的内容 -->
-	<div id="shareImage" style="display:none;">
-		<img src="css/html5.jpg">
-	</div>
-	<!-- 浏览时显示的内容 -->
 	<div class="wrap">
 		<div class="phone">
 			<div class="top"></div>
@@ -37,6 +24,13 @@
 			<img src="css/NetXXBJ.jpg" width="200px" height="200px">
 		</div>  	
 	</div>	
+	<script type="text/javascript">
+		window.onload = function(){
+			var val = document.getElementById("phone").contentWindow.docement.getElementsByTagName("title")[0].innerText;
+		    document.getElementsByTagName("title")[0].innerText = val;
+		    document.getElementById("h").innerText = val;
+		}
+	</script>
   	<!-- 统计代码 -->
 	<script>
 		var _hmt = _hmt || [];
@@ -46,6 +40,6 @@
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
-	</script>
+	</script>	
 </body>
 </html>
