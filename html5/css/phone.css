@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /* display css: ht-height wt-width*/
+.ht{line-height:100%;vertical-align:center;}
 .ht2{height:2%;}.ht5{height:5%;}.ht10{height:10%;}.ht20{height:20%;}
 .ht30{height:30%;}.ht40{height:40%;}.ht50{height:50%;}.ht60{height:60%;}
 .ht25{height:25%;}.ht33{height:33.333%;}.ht70{height:70%;}.ht80{height:80%;}
+.wt{float:left;}.wtcenter{margin:0 auto;}
 .wt2{width:2%;}.wt5{width:5%;}.wt10{width:10%;}.wt20{width:20%;}
 .wt30{width:30%;}.wt40{width:40%;}.wt50{width:50%;}.wt60{width:60%;}
 .wt25{width:25%;}.wt33{width:33.333%;}.wt70{width:70%;}.wt80{width:80%;}
