@@ -5,7 +5,7 @@ strike,strong,em,sub,sup,dl,dt,dd,ol,ul,li,form,label,table,caption{margin:0;pad
 tbody,tfoot,thead,tr,th,td,canvas,footer,header,menu,nav,section,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 footer,header,menu,nav,section{display:block;border:0;}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-body{background:url(bg.jpg) no-repeat fixed center;background-size:cover;
+body{background:url(bg1.jpg) no-repeat fixed center;background-size:cover;
     font-weight:300;font-size:80%;color:white;font-family:'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;}
 .wrap{min-width:560px;max-width:700px;margin:0 auto;padding:0 10px;height:640px;position:relative;}
 .phone{width:322px;overflow:hidden;margin:0 auto;padding-top:2px;

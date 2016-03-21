@@ -18,18 +18,22 @@
 #page2,#page3{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;}
 #page5{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
 #page6{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
-.page .flex{display:flex;justify-content:center;flex-direction:column;}
+#page7{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
+#page8{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
+#page9{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
+#page10{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
+.page .flexr{display:flex;justify-content:center;flex-direction:row;}
+.page .flexc{display:flex;justify-content:center;flex-direction:column;}
 .page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;}
 .page .text{background:url(../pic/bgcolor.png);border-radius:20px;}
 .page .text p{font-size:12px;line-height:18px;color:rgb(34, 88, 1);}
 .page ul li{font-size:14px;line-height:28px;height:28px;color:rgb(34, 88, 1);list-style:disc inside;overflow:hidden;}
 .page .mgr5{margin-right:5%;}.page .mgr13{margin-right:13%;}
 /* last page */
-#lastpage h3{font-size:24px;height:40px;line-height:40px;color:rgb(34, 88, 1);border-bottom:2px solid rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#lastpage h3{font-size:24px;height:40px;line-height:40px;color:rgb(34, 88, 1);width:80%;margin:0 auto;border-bottom:2px solid rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 #lastpage .text{background:none;}
 #lastpage .text p{text-align:center;font-size:14px;line-height:22px;color:rgb(34, 88, 1);}
 #lastpage .pic{width:200px;height:200px;margin:1.5em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
 /* 自定义动画方式：.active #tag/.active .class,必须加.active确保每次播放 */
-/*.active .page h3{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}
-.active .page div{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}*/
-.animated{-webkit-animation-iteration-count:3;animation-iteration-count:3;}/*此为测试专用 便于浏览效果*/
+.active .page .flexc,.active .page .flexr{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}
+.animated{-webkit-animation-iteration-count:5;animation-iteration-count:5;}/*此为测试专用 便于浏览效果*/
