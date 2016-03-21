@@ -3,7 +3,7 @@
 - 响应式布局：CSS3 Media Queries  
 - CSS3动画效果：Animate.min.css  
 - HTML5新标签：Canvas、Audio  
-- 实例中遇到的其他问题 
+- 实例中遇到的其他问题  
 
 > **[HTML5 TEMPLATE](http://cqustone.github.io/HTML5/)**
 
