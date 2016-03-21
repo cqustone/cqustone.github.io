@@ -1,7 +1,0 @@
-/* phone css */
-.top,.state,.bot,.title,.ctrl_panel,.code{display:none;}
-.wrap{width:100%;height:100%;left:0;margin-left:0;}
-.phone{width:100%;height:100%;}
-.con{width:100%;height:100%;}
-.con .arrow{bottom:12px;}
-.con .progress{bottom:2px;}
