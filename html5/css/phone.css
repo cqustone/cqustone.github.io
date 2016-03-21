@@ -33,7 +33,7 @@
 #lastpage h3{font-size:24px;height:40px;line-height:40px;color:rgb(34, 88, 1);width:80%;margin:0 auto;border-bottom:2px solid rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 #lastpage .text{background:none;}
 #lastpage .text p{text-align:center;font-size:14px;line-height:22px;color:rgb(34, 88, 1);}
-#lastpage .pic{width:200px;height:200px;margin:1.5em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
+#lastpage .pic{width:200px;height:200px;margin:1em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
 /* 自定义动画方式：.active #tag/.active .class,必须加.active确保每次播放 */
 .active .page .flexc,.active .page .flexr{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}
 .animated{-webkit-animation-iteration-count:5;animation-iteration-count:5;}/*此为测试专用 便于浏览效果*/

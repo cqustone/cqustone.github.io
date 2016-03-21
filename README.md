@@ -2,6 +2,22 @@
 Here contains files for http://cqustone.github.io.  
 It is my personal website, welcome for your arrival.  
 
+
+#Animate：定义好的CSS3动画效果
+ - Seekers
+ - Flippers
+ - Specials
+ - Lightspeed
+ - Zoom Exits
+ - Zoom Entrances
+ - Fading Exits
+ - Fading Entrances
+ - Bouncing Exits
+ - Bouncing Entrances
+ - Rotating Exits
+ - Rotating Entrances
+
+
 #HTML5  
 - 全屏切换：FullPage.js、Scrollify.js  
 - 响应式布局：CSS3 Media Queries  
