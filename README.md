@@ -3,7 +3,8 @@ Here contains files for http://cqustone.github.io.
 It is my personal website, welcome for your arrival.  
 
 
-#Animate：定义好的CSS3动画效果
+#Animate
+定义好的CSS3动画效果
  - Seekers
  - Flippers
  - Specials
