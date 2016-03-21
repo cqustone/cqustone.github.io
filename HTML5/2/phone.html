@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="cqustone">
+	<meta name="date" content="20160318">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<title>HTML5 Study</title>
+	<script type="text/javascript" src='js/jquery.js'></script>
+	<script type="text/javascript" src='js/fullPage.js'></script>  
+	<script type="text/javascript" src='js/swipeupdown.js'></script>
+	<link rel="stylesheet" href="css/phone.css">
+	<script type="text/javascript" language="javascript">
+		$("document").ready(function(){
+			var playing = false;
+			var audio = $("#media")[0];
+			var scrwidth = document.body.scrollWidth;
+			var len = $("#dowebok").children(".section").length;
+			// 加载中动画隐藏
+			$(window).load(function(){ 
+				audio.play();
+				playing = true; 
+				$("#load").hide();
+				$("#audio").show();
+        $("#arrow").show();
+        $("#dowebok").show();
+				$("#progress").show();
+				$(".progress em").text(1 + " / " + len);
+				$(".progress span").css("width",1 / len * scrwidth);
+			});
+			// 音频播放
+			$("#audio").click(function(){
+				$("#audio").toggleClass("on");
+				if (playing == false) {
+					audio.play();
+					playing = true;
+				}else {
+					audio.pause();
+					playing = false;
+				}
+			});
+			// fullpage.js 屏幕(section)切换：触摸、鼠标滚动事件均可
+			$("#dowebok").fullpage({
+				afterLoad:function(anchorLink, index){		
+          $("#page"+index).children().show().addClass("rotating")			
+					$(".progress em").text(index + " / " + len);
+					$(".progress span").css("width",index / len * scrwidth);
+				}
+			});
+			// 控制按钮 鼠标拖动（为了兼容桌面端鼠标拖动事件）
+			$(document).on('swipedown', '.wrap', function(){$.fn.fullpage.moveSectionUp();});
+			$(document).on('swipeup', '.wrap', function(){$.fn.fullpage.moveSectionDown();});          
+		})
+	</script>  
+</head>
+<body>
+	<!-- 分享时显示的内容 -->
+	<div id="shareImage" style="display:none;">
+		<img src="pic/jqbz.png">
+	</div>
+	<!-- 浏览时显示的内容 -->
+	<div id="content" class="wrap">
+		<!-- 音乐播放 -->
+		<div id="audio" class="off on">
+			<audio loop src="pic/qjzg.mp3" id="media" preload>您的浏览器不支持 audio 标签</audio>
+		</div>
+		<!-- 进度条 -->
+		<div id="progress" class="progress">
+			<span></span>
+			<em class="page-tip"></em>
+		</div>
+		<!-- 提示箭头 -->
+		<div id="arrow" class="arrow">
+			<div class="push">
+				<div class="left"><div class="leftin"></div></div>
+				<div class="right"><div class="rightin"></div></div>
+			</div>
+		</div>		
+		<!-- 加载动画 -->
+		<div class="logo_loading" id="load">
+			<div class="logo_content">
+				<div class="line_wrap">
+					<div class="logo_line1 logo_line_comm_style"></div>
+					<div class="logo_line2 logo_line_comm_style"></div>
+					<div class="logo_line3 logo_line_comm_style"></div>
+					<div class="logo_line4 logo_line_comm_style"></div>
+					<div class="logo_line5 logo_line_comm_style"></div>
+				</div>
+				<div class="logo_part1 logo_comm_style"></div>
+				<div class="logo_part2 logo_comm_style"></div>
+				<div class="logo_part3 logo_comm_style"></div>
+				<div class="logo_part4 logo_comm_style"></div>
+				<div class="logo_part5 logo_comm_style"></div>
+				<div class="logo_part6 logo_comm_style"></div>
+			</div>
+		</div>
+		<!-- 展示内容 START-->
+		<div id="dowebok" style="display:none;">
+			<section class="section">            
+          <div class="page" id="page1">                  
+            <div class="pic piczq"></div>
+            <div class="text">
+              <p>中国人民解放军战区成立大会2月1日在北京八一大楼隆重举行。中共中央总书记、国家主席、中央军委主席习近平向东部战区、南部战区、西部战区、北部战区、中部战区授予军旗并发布训令。</p>
+              <p>习近平指出，战区担负着应对本战略方向安全威胁、维护和平、遏制战争、打赢战争的使命，对维护国家安全战略和军事战略全局具有举足轻重的作用。</p>     
+              <h4>七大军区正式谢幕<br />向七大军区致敬</h4>               
+            </div>
+            
+          </div>           
+      </section>
+      <section class="section">             
+          <div class="page" id="page2">
+            <h3>沈阳军区</h3>
+            <div class="pic picsy"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：沈阳</p>
+              <p>活动地：辽宁、吉林、黑龙江与内蒙古东部</p>
+              <p>家族成员：第16、39、40集团军等</p>
+              <p>代表人物：雷锋、苏宁、刘英俊等</p>
+              <p>代表集体：“雷锋班”“神枪手四连”等</p>
+              <p>机关报：《前进报》</p>
+            </div>
+          </div>             
+      </section>
+      <section class="section">            
+          <div class="page" id="page3">
+            <h3>北京军区</h3>
+            <div class="pic picbj"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：北京</p>
+              <p>活动地：北京、天津、河北、山西、内蒙古</p>
+              <p>家族成员：第27、38、65集团军等</p>
+              <p>代表人物：狼牙山五壮士等</p>
+              <p>代表集体：“松骨峰英雄连”“大功三连”等</p>
+              <p>机关报：《战友报》</p>
+            </div>
+          </div>           
+      </section>
+      <section class="section">            
+          <div class="page" id="page4">
+            <h3>兰州军区</h3>
+            <div class="pic piclz"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：兰州</p>
+              <p>活动地：甘肃、青海、陕西、宁夏、新疆</p>
+              <p>家族成员：第21、47集团军、新疆军区等</p>
+              <p>代表人物：庞国兴、牛先民、马玉革等</p>
+              <p>代表集体：“天蓝突击队”“攻坚英雄连”等</p>
+              <p>机关报：《人民军队》</p>
+            </div>
+          </div>           
+      </section>
+      <section class="section">             
+          <div class="page" id="page5">
+            <h3>济南军区</h3>
+            <div class="pic picjn"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：济南</p>
+              <p>活动地：山东、河南</p>
+              <p>家族成员：第20、26、54集团军等</p>
+              <p>代表人物：杨根思、王杰等</p>
+              <p>代表集体：“沙家浜连”“刘老庄连”“杨靖宇支队”等</p>
+              <p>机关报《前卫报》：</p>
+            </div>
+          </div>              
+      </section>
+      <section class="section">             
+          <div class="page" id="page6">
+            <h3>南京军区</h3>
+            <div class="pic picnj"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：南京</p>
+              <p>活动地：江苏、安徽、浙江、江西、福建、上海</p>
+              <p>家族成员：第1、12、31集团军等</p>
+              <p>代表人物：范匡夫、何祥美等</p>
+              <p>代表集体：“英雄硬六连”“南京路上好八连”“红色尖刀连”等</p>
+              <p>机关报：《人民前线》</p>
+            </div>
+          </div>              
+      </section>
+      <section class="section">            
+          <div class="page" id="page7">
+            <h3>广州军区</h3>
+            <div class="pic picgz"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：广州</p>
+              <p>活动地：广东、广西、湖北、湖南、海南</p>
+              <p>家族成员：第41、42集团军等</p>
+              <p>代表人物：李向群、刘珪等</p>
+              <p>代表集体：“塔山英雄团”“黄草岭守备英雄连”等</p>
+              <p>机关报：《战士报》</p>
+            </div>
+          </div>           
+      </section>
+      <section class="section">            
+          <div class="page" id="page8">
+            <h3>成都军区</h3>
+            <div class="pic piccd"></div>
+            <div class="text">
+              <p>出生年月：1955年2月</p>
+              <p>国籍：中华人民共和国</p>
+              <p>出生地：成都</p>
+              <p>活动地：四川、云南、贵州、西藏、重庆</p>
+              <p>家族成员：第13、14集团军、西藏军区等</p>
+              <p>代表人物：张大权、阳延安等</p>
+              <p>代表集体：“白刃格斗英雄连”“老山防御英雄连”等</p>
+              <p>机关报：《战旗报》</p>
+            </div>
+          </div>           
+      </section>            
+      <section class="section">            
+          <div class="page" id="page9">
+            <h3>向七大军区致敬</h3>
+            <div class="pic pictg"></div>                  
+            <div class="text">
+              <p>扫一扫，关注学习笔记（NetXXBJ）<br /></p>
+              <p>制作：石头(@cqustone)</p>
+              <p>素材来源于互联网</p>
+            </div>
+          </div>           
+      </section>          
+		</div>
+		<!-- 展示内容 END-->
+	</div>
+	<!-- 浏览时显示的内容 -->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?bef5ebcefdfe125348ccaec26517e68e";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</body>
+</html>
