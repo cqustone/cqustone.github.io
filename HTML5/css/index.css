@@ -5,7 +5,7 @@ strike,strong,em,sub,sup,dl,dt,dd,ol,ul,li,form,label,table,caption{margin:0;pad
 tbody,tfoot,thead,tr,th,td,canvas,footer,header,menu,nav,section,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 footer,header,menu,nav,section{display:block;border:0;}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-body{background:url(bg1.jpg) no-repeat fixed center;background-size:cover;
+body{background:url(bg1.jpg) no-repeat fixed center;background-size:100% 100%;
     font-weight:300;font-size:80%;color:white;font-family:'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;}
 .wrap{min-width:560px;max-width:700px;margin:0 auto;padding:0 10px;height:640px;position:relative;}
 .phone{width:322px;overflow:hidden;margin:0 auto;padding-top:2px;
@@ -18,7 +18,7 @@ body{background:url(bg1.jpg) no-repeat fixed center;background-size:cover;
 .content{height:490px;overflow:hidden;}
 /* code & share */
 .code{height:240px;width:200px;overflow:hidden;float:right;padding-top:108px;}
-.code span{width:186px;font-size:12px;display:block;line-height:24px;text-align:center;}
+.code span{width:186px;font-size:12px;display:block;line-height:24px;text-align:center;color:red;}
 @media screen  and (min-height:800px) and (max-height:900px){.code{padding-top:210px;}}
 @media screen  and (min-height:901px) and (max-height:1000px){.code{padding-top:260px;}}
 @media screen  and (min-height:1001px) and (max-height:1100px){.code{padding-top:310px;}}
