@@ -3,9 +3,8 @@
  - HTML5 Page Study  
  - CSS3 Media Queries  
 
-> **[Animate](http://cqustone.github.io/NOTES/animate/)**
+> **[Animate  定义好的CSS3动画效果](http://cqustone.github.io/NOTES/animate/)**
 
-定义好的CSS3动画效果  
  - Seekers  
  - Flippers  
  - Specials  
@@ -19,10 +18,9 @@
  - Rotating Exits  
  - Rotating Entrances  
 
-> **[FlatLab](http://cqustone.github.io/NOTES/flatlab/)**
+> **[FlatLab  完善的HTML5+CSS3、扁平化、响应式布局模板](http://cqustone.github.io/NOTES/flatlab/)**
 
-完善的HTML5+CSS3、扁平化、响应式布局模板  
-更多组件查看[FLATLAB](http://thevectorlab.net/flatlab)  
+更多组件查看 [FLATLAB](http://thevectorlab.net/flatlab)  
 - Layouts、Menu  
 - Components、Extra  
 - Charts、Dashboard  
