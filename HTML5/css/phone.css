@@ -1,4 +1,4 @@
-@charset "UTF-8";	
+@charset "UTF-8";
 /* display css: ht-height wt-width*/
 .wtl{float:left;border-radius:10px;}
 .wtc{margin:0 auto;border-radius:10px;}
@@ -20,19 +20,29 @@
 .flexr{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:row;flex-direction:row;}
 .flexc{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;}
 /*show content*/
-#page2,#page3{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;}
-#page5,#page8{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
-#page6,#page9{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
-#page7,#page10{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
-.page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;}
-.page .text{background:url(../pic/bgcolor.png);border-radius:20px;}
-.page .text p{font-size:12px;line-height:18px;color:rgb(34, 88, 1);}
-.page ul li{font-size:16px;line-height:28px;height:28px;color:rgb(34, 88, 1);list-style:disc inside;overflow:hidden;}
+.page h3{font-size:1.5em;height:1.5em;line-height:1.5em;font-weight:bolder;color:rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.page p{font-size:14px;line-height:24px;height:24px;overflow:hidden;color:white;text-align:center;}
+.page ul{text-align:center;color:red;}
+.page ul li{font-size:14px;line-height:28px;height:28px;text-align:left;color:rgb(34, 88, 1);list-style:disc inside;overflow:hidden;}
+.man{background-position:center;background-size:contain;background-repeat:no-repeat;}
+.m1{background-image:url(../pic/m1.png);}.m2{background-image:url(../pic/m2.png);}
+.w1{background-image:url(../pic/w1.png);}.w2{background-image:url(../pic/w2.png);}
 /* last page */
-#lastpage h3{font-size:24px;height:40px;line-height:40px;color:rgb(34, 88, 1);width:80%;margin:0 auto;border-bottom:2px solid rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
-#lastpage .text{background:none;}
-#lastpage .text p{text-align:center;font-size:14px;line-height:22px;color:rgb(34, 88, 1);}
+#lastpage h3{height:40px;line-height:40px;width:80%;margin:0 auto;border-bottom:2px solid rgb(34, 88, 1);}
+#lastpage p{font-size:14px;line-height:22px;color:rgb(34, 88, 1);}
 #lastpage .pic{width:200px;height:200px;margin:1.2em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
-/* 自定义动画方式：.active #tag/.active .class,必须加.active确保每次播放 */
+/* 自定义动画START .active #tag/.active .class,必须加.active确保每次播放 */
 .active .page .flexc,.active .page .flexr{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}
-.animated{-webkit-animation-iteration-count:5;animation-iteration-count:3;}/*此为测试专用 便于浏览效果*/
+.active #page5 .man{-webkit-animation:bounce 1s 1s,flash 1s 3s,pulse 1s 5s,rubberBand 1s 7s,shake 1s 9s,swing 1s 11s,tada 1s 13s,wobble 1s 15s;
+							animation:bounce 1s 1s,flash 1s 3s,pulse 1s 5s,rubberBand 1s 7s,shake 1s 9s,swing 1s 11s,tada 1s 13s,wobble 1s 15s;}
+.active #page6 .man{-webkit-animation:flip 1s 1s,flipInX 1s 3s,flipInY 1s 5s,hinge 1s 7s,rollIn 1s 9s,rollOut 1s 11s,lightSpeedIn 1s 13s,lightSpeedOut 1s 15s;
+							animation:flip 1s 1s,flipInX 1s 3s,flipInY 1s 5s,hinge 1s 7s,rollIn 1s 9s,rollOut 1s 11s,lightSpeedIn 1s 13s,lightSpeedOut 1s 15s;}
+.active #page7 .man{-webkit-animation:zoomIn 1s 1s,zoomInDown 1s 3s,zoomInLeft 1s 5s,zoomInRight 1s 7s,zoomInUp 1s 9s;
+							animation:zoomIn 1s 1s,zoomInDown 1s 3s,zoomInLeft 1s 5s,zoomInRight 1s 7s,zoomInUp 1s 9s;}
+.active #page8 .man{-webkit-animation:fadeIn 1s 1s,fadeInDown 1s 3s,fadeInLeft 1s 5s,fadeInRight 1s 7s,fadeInUp 1s 9s;
+							animation:fadeIn 1s 1s,fadeInDown 1s 3s,fadeInLeft 1s 5s,fadeInRight 1s 7s,fadeInUp 1s 9s;}
+.active #page9 .man{-webkit-animation:bounceIn 1s 1s,bounceInDown 1s 3s,bounceInLeft 1s 5s,bounceInRight 1s 7s,bounceInUp 1s 9s;
+							animation:bounceIn 1s 1s,bounceInDown 1s 3s,bounceInLeft 1s 5s,bounceInRight 1s 7s,bounceInUp 1s 9s;}
+.active #page10 .man{-webkit-animation:rotateIn 1s 1s,rotateInDownLeft 1s 3s,rotateInDownRight 1s 5s,rotateInUpLeft 1s 7s,rotateInUpRight 1s 9s;
+							animation:rotateIn 1s 1s,rotateInDownLeft 1s 3s,rotateInDownRight 1s 5s,rotateInUpLeft 1s 7s,rotateInUpRight 1s 9s;}
+/* 自定义动画END .active #tag/.active .class,必须加.active确保每次播放 */
