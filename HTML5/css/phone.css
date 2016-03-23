@@ -1,16 +1,12 @@
-@charset "UTF-8";
-
-/*	定义默认的 margin	
-	动画效果演示  添加链接
-	微信浏览不垂直居中  添加 -webkit- ？*/
-	
+@charset "UTF-8";	
 /* display css: ht-height wt-width*/
 .wtl{float:left;border-radius:10px;}
 .wtc{margin:0 auto;border-radius:10px;}
 .wtr{float:right;border-radius:10px;}
 .wt{width:100%;border-radius:10px;text-align:center;}
 .ht{height:100%;border-radius:10px;text-align:center;}
-.wt2{width:2%;}.ht2{height:2%;}
+.wt2{width:2%;}.wt4{width:4%;}.wt8{width:8%;}.wt12{width:12%;}
+.ht2{height:2%;}.ht4{height:4%;}.ht8{height:8%;}.ht12{height:12%;}
 .wt5{width:5%;}.wt10{width:10%;}.wt20{width:20%;}.wt30{width:30%;}.wt40{width:40%;}
 .wt50{width:50%;}.wt60{width:60%;}.wt70{width:70%;}.wt80{width:80%;}.wt90{width:90%;}
 .wt16{width:16%;}.wt25{width:25%;}.wt32{width:32%;}.wt48{width:48%;}.wt96{width:96%;}
@@ -19,26 +15,24 @@
 .ht16{height:16%;}.ht25{height:25%;}.ht32{height:32%;}.ht48{height:48%;}.ht96{height:96%;}
 .bg1{background:url(bg1.png);}.bg2{background:url(bg2.png);}.bg3{background:url(bg3.png);}
 .bg4{background:url(bg4.png);}.bg5{background:url(bg5.png);}.bg6{background:url(bg6.png);}
+.mgl5{margin-left:5%;}.mgl8{margin-left:8%;}.mgl12{margin-left:12%;}
+.mgr5{margin-right:5%;}.mgr8{margin-right:8%;}.mgr12{margin-right:12%;}
+.flexr{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:row;flex-direction:row;}
+.flexc{display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;}
 /*show content*/
 #page2,#page3{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;}
-#page5{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
-#page6{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
-#page7{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
-#page8{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
-#page9{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
-#page10{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
-.page .flexr{display:flex;justify-content:center;flex-direction:row;}
-.page .flexc{display:flex;justify-content:center;flex-direction:column;}
+#page5,#page8{background:url(../pic/bg1.jpg) no-repeat center;background-size:cover;} 
+#page6,#page9{background:url(../pic/bg2.jpg) no-repeat center;background-size:cover;} 
+#page7,#page10{background:url(../pic/bg3.jpg) no-repeat center;background-size:cover;} 
 .page h3{color:rgb(34, 88, 1);font-size:2em;font-weight:bolder;text-align:center;}
 .page .text{background:url(../pic/bgcolor.png);border-radius:20px;}
 .page .text p{font-size:12px;line-height:18px;color:rgb(34, 88, 1);}
-.page ul li{font-size:14px;line-height:28px;height:28px;color:rgb(34, 88, 1);list-style:disc inside;overflow:hidden;}
-.page .mgr5{margin-right:5%;}.page .mgr13{margin-right:13%;}
+.page ul li{font-size:16px;line-height:28px;height:28px;color:rgb(34, 88, 1);list-style:disc inside;overflow:hidden;}
 /* last page */
 #lastpage h3{font-size:24px;height:40px;line-height:40px;color:rgb(34, 88, 1);width:80%;margin:0 auto;border-bottom:2px solid rgb(34, 88, 1);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 #lastpage .text{background:none;}
 #lastpage .text p{text-align:center;font-size:14px;line-height:22px;color:rgb(34, 88, 1);}
-#lastpage .pic{width:200px;height:200px;margin:1em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
+#lastpage .pic{width:200px;height:200px;margin:1.2em auto;background:url(NetXXBJ.jpg) no-repeat center;background-size:contain;border-radius:20px;border-color:rgb(34, 88, 1);}
 /* 自定义动画方式：.active #tag/.active .class,必须加.active确保每次播放 */
 .active .page .flexc,.active .page .flexr{-webkit-animation:zoomIn 1s ease 0s 1 both;animation:zoomIn 1s ease 0s 1 both;}
-.animated{-webkit-animation-iteration-count:5;animation-iteration-count:5;}/*此为测试专用 便于浏览效果*/
+.animated{-webkit-animation-iteration-count:5;animation-iteration-count:3;}/*此为测试专用 便于浏览效果*/
