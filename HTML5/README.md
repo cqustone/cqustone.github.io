@@ -11,6 +11,8 @@
  - 使用方法：填充index.html内的两处标题  
  - 使用方法：修改phone.html内的显示内容  
  - 使用方法：修改phone.css内样式和动画  
+ - Design.psd：iPhone6s分辨率1080*1920  
+ - Design.psd：含大量图标素材、有参考线及标识  
 
 > **[HTML5 STUDY](http://cqustone.github.io/HTML5/2/)**
 
