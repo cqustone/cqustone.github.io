@@ -25,17 +25,8 @@
         </li>
         <li><a href="{{ site.baseurl }}/HTML5/"><span class="glyphicon glyphicon-phone"></span>HTML5</a></li>
 		 <li><a href="{{ site.baseurl }}/NOTES/"><span class="glyphicon glyphicon-book"></span>NOTES</a></li>
-        {% for p in site.pages %}
-          {% if p.title %}
-            {% if p.url == page.url %}
-              <li class="active">
-              {% else %}
-              <li>
-            {% endif %}
-                <a href="{{ p.url | prepend: site.baseurl }}"><span class="glyphicon {{ p.icon }}"></span> {{ p.title }}</a>
-              </li>
-          {% endif %}
-        {% endfor %}
+		  <li><a href="{{ site.baseurl }}/Work/"><span class="glyphicon glyphicon-book"></span>Work</a></li>
+       
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
