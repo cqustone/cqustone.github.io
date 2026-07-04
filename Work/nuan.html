@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>暖暖🎒暑假作业抽奖器</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+            background: linear-gradient(145deg, #f9f3e6 0%, #ffe9d4 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            margin: 0;
+        }
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: rgba(255, 250, 240, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 64px 64px 48px 48px;
+            padding: 28px 22px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+            border: 2px solid #fff8e7;
+            transition: all 0.2s ease;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #b45f3b;
+            text-align: center;
+            letter-spacing: 2px;
+            margin-top: -6px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        h1 span {
+            background: #f7d9b3;
+            padding: 0 18px;
+            border-radius: 60px;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: #6b3f2a;
+        }
+        .subhead {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #7e5a44;
+            background: #efdbc9;
+            border-radius: 60px;
+            padding: 8px 16px;
+            display: inline-block;
+            margin: 0 auto 22px;
+            letter-spacing: 1px;
+            border: 1px dashed #b98a6b;
+        }
+        .card-panel {
+            background: #fef7ed;
+            border-radius: 48px;
+            padding: 20px 16px 16px;
+            box-shadow: inset 0 2px 8px rgba(90, 50, 30, 0.08), 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .subject-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+        .subject-item {
+            background: white;
+            border-radius: 40px;
+            padding: 14px 22px 14px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid #f0ded0;
+            transition: all 0.15s;
+        }
+        .subject-item:hover {
+            border-color: #dbb594;
+            background: #fffbf5;
+        }
+        .subject-label {
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #4f3523;
+            min-width: 100px;
+        }
+        .subject-label i {
+            font-size: 1.9rem;
+        }
+        .subject-result {
+            background: #f2e3d3;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #2d1e13;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #e4cdb6;
+            transition: 0.2s;
+            word-break: break-word;
+        }
+        .subject-result.empty {
+            background: #d9d0c7;
+            color: #5d4a3a;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        .lottery-btn {
+            background: #feac7a;
+            border: none;
+            border-radius: 60px;
+            padding: 18px 10px;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #3d2a1b;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #b16f47, 0 6px 16px rgba(160, 100, 50, 0.3);
+            transition: 0.08s linear;
+            border: 2px solid #fad5b0;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            background-image: radial-gradient(circle at 20% 30%, #ffcd9a, #f8955a);
+        }
+        .lottery-btn:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 #9d5f3b;
+        }
+        .lottery-btn:disabled {
+            opacity: 0.6;
+            transform: translateY(4px);
+            box-shadow: 0 4px 0 #7e553a;
+            pointer-events: none;
+        }
+        .info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: #ede0d2;
+            border-radius: 60px;
+            padding: 12px 20px;
+            margin-top: 10px;
+            border: 1px solid #dcc4b0;
+            gap: 10px;
+        }
+        .info-badge {
+            font-size: 1rem;
+            background: #b48d71;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            background: #b48d71;
+            box-shadow: inset 0 1px 4px rgba(255,255,255,0.3);
+        }
+        .reset-area {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .reset-btn {
+            background: #f0e3d8;
+            border: 1px solid #b58d73;
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #3d2a1b;
+            cursor: pointer;
+            transition: all 0.1s;
+            box-shadow: 0 2px 0 #ad8870;
+        }
+        .reset-btn:active {
+            transform: translateY(3px);
+            box-shadow: none;
+        }
+        .history-tag {
+            background: #dac2ae;
+            padding: 5px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #2d1b10;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            max-width: 320px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .footer-emoji {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 1.4rem;
+            color: #9a7b64;
+            letter-spacing: 8px;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 20px 12px 32px; }
+            .subject-item { flex-wrap: wrap; gap: 8px; justify-content: center; }
+            .subject-label { min-width: 80px; font-size: 1.3rem; }
+            .subject-result { min-width: 100px; font-size: 1.2rem; }
+            .lottery-btn { font-size: 1.5rem; padding: 14px 8px; }
+            .info-bar { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+<div class="container" role="main">
+    <h1>
+        📚 作业抽奖
+        <span>🎯</span>
+    </h1>
+    <div style="text-align: center;">
+        <div class="subhead">
+            <p>⭐ 每天每类抽1项 · 空选项代表「今天免做」 ⭐</p>
+            <p>⭐ 前提是完成当日随堂作业及数学每日一练 ⭐</p>
+        </div>
+    </div>
+
+    <div class="card-panel">
+        <!-- 三大类作业展示 -->
+        <div class="subject-grid" id="subjectGrid">
+            <!-- 语文 -->
+            <div class="subject-item" id="chineseItem">
+                <div class="subject-label"><span>📖</span> 语文</div>
+                <div class="subject-result" id="chineseResult">等待抽奖</div>
+            </div>
+            <!-- 数学 -->
+            <div class="subject-item" id="mathItem">
+                <div class="subject-label"><span>🔢</span> 数学</div>
+                <div class="subject-result" id="mathResult">等待抽奖</div>
+            </div>
+            <!-- 英语 -->
+            <div class="subject-item" id="englishItem">
+                <div class="subject-label"><span>🔤</span> 英语</div>
+                <div class="subject-result" id="englishResult">等待抽奖</div>
+            </div>
+        </div>
+
+        <!-- 抽奖按钮 -->
+        <button class="lottery-btn" id="lotteryBtn">🎲 抽今日作业 🎲</button>
+
+        <!-- 状态与重置 -->
+        <div class="info-bar">
+            <div class="info-badge" id="dayCounter">📅 第 1 天</div>
+            <div class="reset-area">
+                <span class="history-tag" id="historyPreview">📋 上次: -</span>
+                <button class="reset-btn" id="resetBtn">↺ 重置</button>
+            </div>
+        </div>
+        <div class="footer-emoji">✨ 🎈 🎉 ✨</div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        "use strict";
+
+        // ---------- 作业池 ----------
+        // 语文作业列表（可自由增删）
+        const CHINESE_TASKS = [
+            "学而思1专题",
+            "同步字帖1课",
+            "书法练习半页",
+            "同步阅读2本",
+            "分级阅读2课",
+            "群文阅读1专题",
+            "同步作文1单元",
+            "作文辅导1单元",
+            "看图写话1课"
+        ];
+        // 数学作业列表
+        const MATH_TASKS = [
+           "嗨数学半本",
+            "数学故事集3篇",
+            "学而思应用思维",
+            "学而思图形思维"
+        ];
+        // 英语作业列表
+        const ENGLISH_TASKS = [
+            "三上英语1单元",
+            "RAZ·AA练习3页"
+        ];
+
+        // 空选项标记 (代表“无作业”)
+        const EMPTY_SLOT = '🎈 空 (免做)';
+
+        // ---------- 全局状态 ----------
+        let currentDay = 1;                // 从第1天开始
+        let lastResults = {
+            chinese: null,
+            math: null,
+            english: null
+        };
+        let isSpecialFreeDay = false;     // 是否触发“全部免做” (每半个月一次)
+
+        // DOM 元素
+        const chineseResultEl = document.getElementById('chineseResult');
+        const mathResultEl = document.getElementById('mathResult');
+        const englishResultEl = document.getElementById('englishResult');
+        const lotteryBtn = document.getElementById('lotteryBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const dayCounter = document.getElementById('dayCounter');
+        const historyPreview = document.getElementById('historyPreview');
+
+        // ---------- 辅助函数 ----------
+        function shuffleArray(arr) {
+            // 简易 Fisher–Yates 洗牌，用于随机抽取
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        // 从数组中随机选一项 (若数组为空则返回 null)
+        function pickRandomItem(arr) {
+            if (!arr || arr.length === 0) return null;
+            const idx = Math.floor(Math.random() * arr.length);
+            return arr[idx];
+        }
+
+        // 判断是否该半月全休: 每半个月 (15天) 一次，且随机落在哪一天 (1~15 内随机)
+        // 我们使用 currentDay 来判断: 每15天一个周期，在第 (1~15) 天中随机一天为全休日
+        // 但为了更“随机”，在每15天周期开始时，提前选好一个“幸运日”。
+        // 因为 day 从1开始，我们设定周期起始为1, 16, 31 ... 即 (currentDay-1) % 15 === 0 时重新选择。
+        let freeDayOffset = 0;   // 当前周期内全休日偏移 (0~14)
+        let freeDayNum = 0;
+
+        function updateFreeDayOffset() {
+            // 每15天重置一次偏移 (在周期第一天)
+            const cycleDay = (currentDay - 1) % 15;  // 0~14
+            if (cycleDay === 0 ) {
+                if(currentDay>freeDayNum*15){
+                    // 新周期：随机选 0~14 中的一天作为全休日 (0 表示第一天，14 表示第15天)
+                    freeDayOffset = Math.floor(Math.random() * 15); // 0~14
+                }
+            }
+        }
+
+        // 判断今天是否为全休日 (全部免做)
+        function isTodayFreeDay() {
+            const cycleDay = (currentDay - 1) % 15;  // 0~14
+            if(cycleDay === freeDayOffset){
+                freeDayNum=freeDayNum+1
+            }
+            return cycleDay === freeDayOffset;
+        }
+
+        // 核心抽奖逻辑 (返回结果对象)
+        function drawLottery() {
+            // 1. 先更新全休日偏移 (基于当前天数)
+            updateFreeDayOffset();
+
+            // 2. 检查是否为全休日 (全部大类免做)
+            const freeDay = isTodayFreeDay();
+
+            let chinesePick, mathPick, englishPick;
+
+            if (freeDay) {
+                // 全部免做 🎉
+                chinesePick = EMPTY_SLOT;
+                mathPick = EMPTY_SLOT;
+                englishPick = EMPTY_SLOT;
+                isSpecialFreeDay = true;
+            } else {
+                isSpecialFreeDay = false;
+                // 正常抽取：每类独立随机 (包含空选项)
+                // 构造包含空选项的副本
+                const chineseWithEmpty = [...CHINESE_TASKS, EMPTY_SLOT];
+                const mathWithEmpty = [...MATH_TASKS, EMPTY_SLOT];
+                const englishWithEmpty = [...ENGLISH_TASKS, EMPTY_SLOT];
+
+                // 随机打乱后取第一个 (或者直接pickRandomItem)
+                chinesePick = pickRandomItem(chineseWithEmpty);
+                mathPick = pickRandomItem(mathWithEmpty);
+                englishPick = pickRandomItem(englishWithEmpty);
+
+                // 极低概率全部抽到空 (三个空) 但这是允许的，我们保留
+                // 但为了趣味，如果三个都为空，可重新抽？不，允许“全空”也是一种抽奖结果。
+                // 但全空与 “全部免做” 不同，全空是三个大类各自抽到空，概率较低，但保留。
+            }
+
+            return {
+                chinese: chinesePick,
+                math: mathPick,
+                english: englishPick,
+                isFreeDay: freeDay
+            };
+        }
+
+        // ---------- 更新UI ----------
+        function renderResults(result) {
+            if (!result) return;
+            // 更新各个学科显示
+            chineseResultEl.textContent = result.chinese || '⚡';
+            mathResultEl.textContent = result.math || '⚡';
+            englishResultEl.textContent = result.english || '⚡';
+
+            // 添加特殊样式 (空选项)
+            [chineseResultEl, mathResultEl, englishResultEl].forEach(el => {
+                if (el.textContent === EMPTY_SLOT) {
+                    el.classList.add('empty');
+                } else {
+                    el.classList.remove('empty');
+                }
+            });
+
+            // 更新天数显示
+            dayCounter.textContent = `📅 第 ${currentDay} 天`;
+
+            // 更新历史预览 (仅显示上次抽奖摘要)
+            const parts = [];
+            if (result.chinese && result.chinese !== EMPTY_SLOT) parts.push(`语文:${result.chinese}`);
+            else if (result.chinese === EMPTY_SLOT) parts.push(`语文:免做`);
+            if (result.math && result.math !== EMPTY_SLOT) parts.push(`数学:${result.math}`);
+            else if (result.math === EMPTY_SLOT) parts.push(`数学:免做`);
+            if (result.english && result.english !== EMPTY_SLOT) parts.push(`英语:${result.english}`);
+            else if (result.english === EMPTY_SLOT) parts.push(`英语:免做`);
+
+            let previewText = parts.join(' · ');
+            if (result.isFreeDay) {
+                previewText = '🎁 全部免做！ (半月福利)';
+            } else if (!previewText) {
+                previewText = '所有作业免做 ✨';
+            }
+            historyPreview.textContent = `📋 今日: ${previewText}`;
+
+            // 储存上次结果 (用于重置等)
+            lastResults = {
+                chinese: result.chinese,
+                math: result.math,
+                english: result.english,
+                isFreeDay: result.isFreeDay
+            };
+        }
+
+        // 执行一次抽奖并更新界面
+        function performDraw() {
+            // 防止连点
+            lotteryBtn.disabled = true;
+            lotteryBtn.textContent = '🎲 抽奖中...';
+
+            // 模拟微小延迟 (让按钮有反馈)
+            setTimeout(() => {
+                const result = drawLottery();
+                renderResults(result);
+                // 天数增加 (抽奖后推进到“明天”)
+                currentDay++;
+                // 更新计数器显示 (已在render里更新, 但再刷一次)
+                dayCounter.textContent = `📅 第 ${currentDay} 天`;
+
+                // 恢复按钮
+                lotteryBtn.disabled = false;
+                lotteryBtn.textContent = '🎲 抽今日作业 🎲';
+            }, 120);
+        }
+
+        // ---------- 重置游戏 (回到第一天) ----------
+        function resetGame() {
+            // 重置天数
+            currentDay = 1;
+            freeDayNum = 0;
+            // 重置偏移 (重新计算半月)
+            freeDayOffset = Math.floor(Math.random() * 15); // 新周期随机
+            // 清空显示 (显示等待抽奖)
+            chineseResultEl.textContent = '等待抽奖';
+            mathResultEl.textContent = '等待抽奖';
+            englishResultEl.textContent = '等待抽奖';
+            [chineseResultEl, mathResultEl, englishResultEl].forEach(el => el.classList.remove('empty'));
+
+            dayCounter.textContent = `📅 第 1 天`;
+            historyPreview.textContent = '📋 已重置，点击抽奖';
+            lastResults = { chinese: null, math: null, english: null };
+            isSpecialFreeDay = false;
+            // 启用按钮
+            lotteryBtn.disabled = false;
+            lotteryBtn.textContent = '🎲 抽今日作业 🎲';
+        }
+
+        // ---------- 初始化 ----------
+        function init() {
+            // 预置一个随机全休日偏移
+            freeDayOffset = Math.floor(Math.random() * 15);
+            // 第一次展示: 显示初始状态
+            chineseResultEl.textContent = '等待抽奖';
+            mathResultEl.textContent = '等待抽奖';
+            englishResultEl.textContent = '等待抽奖';
+            dayCounter.textContent = `📅 第 1 天`;
+            historyPreview.textContent = '📋 点击抽奖开始！';
+
+            // 事件绑定
+            lotteryBtn.addEventListener('click', performDraw);
+            resetBtn.addEventListener('click', function() {
+                resetGame();
+            });
+
+            // 额外： 如果用户双击重置，安全。
+            console.log('🎒 暑假作业抽奖器已启动！ 祝小朋友学习快乐~');
+        }
+
+        // 启动
+        init();
+
+    })();
+</script>
+</body>
+</html>
